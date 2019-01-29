@@ -46,7 +46,7 @@
                                 <rect key="frame" x="106" y="186" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.13004292550266591" green="0.99908632040000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" label="add51"/>
+                                <accessibility key="accessibilityConfiguration" label="add5"/>
                                 <state key="normal" title="+5">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -55,6 +55,7 @@
                                 <rect key="frame" x="59" y="186" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.034920876077064067" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="sub5"/>
                                 <state key="normal" title="-5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -85,6 +86,7 @@
                                 <rect key="frame" x="306" y="186" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12656155228614807" green="1" blue="0.0037266197614371777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="add5"/>
                                 <state key="normal" title="+5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -93,6 +95,7 @@
                                 <rect key="frame" x="259" y="186" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="sub5"/>
                                 <state key="normal" title="-5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -123,6 +126,7 @@
                                 <rect key="frame" x="106" y="345" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12656155228614807" green="1" blue="0.0037266197614371777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="add5"/>
                                 <state key="normal" title="+5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -131,6 +135,7 @@
                                 <rect key="frame" x="59" y="345" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="sub5"/>
                                 <state key="normal" title="-5">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -161,6 +166,7 @@
                                 <rect key="frame" x="308" y="345" width="47" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12656155228614807" green="1" blue="0.0037266197614371777" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="add5"/>
                                 <state key="normal" title="+5">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -192,6 +198,7 @@
                         <outlet property="lifetotal2" destination="fjf-6E-mSp" id="z8e-wV-fRc"/>
                         <outlet property="lifetotal3" destination="Lhy-y3-ilc" id="MSf-Sm-uxT"/>
                         <outlet property="lifetotal4" destination="By7-Sd-Z4e" id="9qZ-NF-fOt"/>
+                        <outlet property="losingPlayer" destination="9xY-UY-wk0" id="Xhl-0c-kuT"/>
                         <outlet property="player1" destination="vN6-NS-v0m" id="HoO-y3-Lky"/>
                         <outlet property="s" destination="7cX-LH-HjU" id="EUf-4b-9eR"/>
                     </connections>
