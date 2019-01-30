@@ -85,7 +85,8 @@ class ViewController: UIViewController {
         }
     }
     
-    //Checks if any lifeTotals are 0. If so, prints losing message. Returns losing player. Returns 0 if no one has lost.
+    //Checks if any lifeTotals are 0. If so, prints losing message. Returns losing player.
+    //Returns 0 if no one has lost.
     func checkLoser() -> Int {
         var player = 0
         if values[0] <= 0 {
