@@ -11,17 +11,17 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var losingPlayer: UILabel! //Losing Player
+    @IBOutlet weak var losingPlayer: UILabel? = nil //Losing Player
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        losingPlayer.isHidden = false;
+        losingPlayer?.isHidden = false;
     }
     
-    @IBOutlet weak var lifeTotal1: UILabel! //Player 1
-    @IBOutlet weak var lifeTotal2: UILabel! //Player 2
-    @IBOutlet weak var lifeTotal3: UILabel! //Player 3
-    @IBOutlet weak var lifeTotal4: UILabel! //Player 4
+    @IBOutlet weak var lifeTotal1: UILabel? //Player 1
+    @IBOutlet weak var lifeTotal2: UILabel? //Player 2
+    @IBOutlet weak var lifeTotal3: UILabel? //Player 3
+    @IBOutlet weak var lifeTotal4: UILabel? //Player 4
     
     /*
      * Increments or decrements a players lifeTotal
@@ -48,16 +48,16 @@ class ViewController: UIViewController {
     func updateLabel(label : Int, value: String) {
         switch label {
         case 0:
-            lifeTotal1.text = value
+            lifeTotal1?.text = value
             break
         case 1:
-            lifeTotal2.text = value
+            lifeTotal2?.text = value
             break
         case 2:
-            lifeTotal3.text = value
+            lifeTotal3?.text = value
             break
         case 4:
-            lifeTotal4.text = value
+            lifeTotal4?.text = value
             break
         default:
             break
@@ -67,17 +67,17 @@ class ViewController: UIViewController {
     //Checks if any lifeTotals are 0. If so, prints losing message.
     func checkLoser() {
         var player = 0
-        if lifeTotal1.text == "0" {
+        if lifeTotal1?.text == "0" {
             player = 1
-        } else if lifeTotal2.text == "0" {
+        } else if lifeTotal2?.text == "0" {
             player = 2
-        } else if lifeTotal3.text == "0" {
+        } else if lifeTotal3?.text == "0" {
             player = 3
-        } else if lifeTotal4.text == "0" {
+        } else if lifeTotal4?.text == "0" {
             player = 4
         }
         if player != 0 {
-            losingPlayer.text = "Player \(player) Loses!"
+            losingPlayer?.text = "Player \(player) Loses!"
         }
     }
     
