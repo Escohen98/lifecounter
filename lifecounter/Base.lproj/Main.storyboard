@@ -111,6 +111,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-jj-d0N" userLabel="+1 2">
+                                                <rect key="frame" x="77" y="83" width="48.5" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.12656155229999999" green="1" blue="0.003726619761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="2"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOA-SP-3fc"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4I-0O-kxB" userLabel="-1 2">
                                                 <rect key="frame" x="20" y="84" width="47" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,18 +159,6 @@
                                                     <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cZ-Ol-D63"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ES3-jj-d0N" userLabel="+1 2">
-                                                <rect key="frame" x="77" y="83" width="48.5" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.12656155229999999" green="1" blue="0.003726619761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration" label="2"/>
-                                                <state key="normal" title="+">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOA-SP-3fc"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -181,19 +181,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-88-rRT" userLabel="-1 3">
-                                                <rect key="frame" x="20" y="86" width="47" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.99953407049999998" green="0.032853953540000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <accessibility key="accessibilityConfiguration" label="3"/>
-                                                <state key="normal" title="-">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbK-ut-xln"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-yY-RBA" userLabel="+1 3">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvp-yY-RBA" userLabel="+1 3">
                                                 <rect key="frame" x="77" y="86" width="49" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.12656155229999999" green="1" blue="0.003726619761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,16 +193,16 @@
                                                     <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Tb-6c-2zu"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auu-pH-rSr" userLabel="-5 3">
-                                                <rect key="frame" x="20" y="124" width="47" height="29"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVo-88-rRT" userLabel="-1 3">
+                                                <rect key="frame" x="20" y="86" width="47" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.99953407049999998" green="0.032853953540000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" label="3"/>
-                                                <state key="normal" title="-5">
+                                                <state key="normal" title="-">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8tR-Bg-1Ff"/>
+                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbK-ut-xln"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lee-Qu-wa2" userLabel="+5 3">
@@ -227,6 +215,18 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsc-P8-vCs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auu-pH-rSr" userLabel="-5 3">
+                                                <rect key="frame" x="20" y="124" width="47" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="3"/>
+                                                <state key="normal" title="-5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8tR-Bg-1Ff"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -275,17 +275,6 @@
                                                     <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l3A-G6-mu8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6j-aH-MKc" userLabel="-5 4">
-                                                <rect key="frame" x="20" y="123.5" width="47" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="-5">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVF-LN-uEB"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCv-1X-f9q" userLabel="+5 4">
                                                 <rect key="frame" x="79" y="123" width="47" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -296,6 +285,17 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Txy-nQ-8Ky"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6j-aH-MKc" userLabel="-5 4">
+                                                <rect key="frame" x="20" y="123.5" width="47" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.99953407049179077" green="0.032853953540325165" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="-5">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeLife:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hVF-LN-uEB"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -320,6 +320,7 @@
                         <outlet property="lifeTotal2" destination="By7-Sd-Z4e" id="gus-O2-0wT"/>
                         <outlet property="lifeTotal3" destination="Lhy-y3-ilc" id="YVJ-JI-End"/>
                         <outlet property="lifeTotal4" destination="fjf-6E-mSp" id="hAj-js-V60"/>
+                        <outlet property="losingPlayer" destination="9xY-UY-wk0" id="biv-9M-gHD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
