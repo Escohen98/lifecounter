@@ -11,74 +11,92 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var losingPlayer: UILabel? = nil //Losing Player
+   // @IBOutlet weak var losingPlayer: UILabel? = nil //Losing Player
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        losingPlayer?.isHidden = false;
+       // losingPlayer?.isHidden = false;
     }
+    @IBOutlet weak var lifeTotal1: UILabel! //Player 1
+    @IBOutlet weak var lifeTotal2: UILabel! //Player 2
+    @IBOutlet weak var lifeTotal3: UILabel! //Player 3
+    @IBOutlet weak var lifeTotal4: UILabel! //Player 4
     
-    @IBOutlet weak var lifeTotal1: UILabel? //Player 1
-    @IBOutlet weak var lifeTotal2: UILabel? //Player 2
-    @IBOutlet weak var lifeTotal3: UILabel? //Player 3
-    @IBOutlet weak var lifeTotal4: UILabel? //Player 4
-    
+    var values : [Int] = [20,20,20,20]
     /*
      * Increments or decrements a players lifeTotal
-     * based on button pressed. Stepper changes value
-     * by 1. Buttons change value of stepper by 1.
-     * Updates label of given player.
+     * based on button pressed.
      */
-    @IBAction func changeLife(_ sender: UIControl) {
+    
+    @IBAction func changeLife(_ sender: UIButton) {
         if sender.tag < 4 {
-            //Steppers (0-3)
-            updateLabel(label: (sender as! UIStepper).tag, value: String((sender as! UIStepper).value))
-        } else if sender.tag >= 8 {
-            //-5 Button (8-11)
-            (self.view.viewWithTag(sender.tag-8) as! UIStepper).value -= 5
-            updateLabel(label: sender.tag-8, value: String((self.view.viewWithTag(sender.tag-8) as! UIStepper).value))
+            //+1 Buttons (0-3)
+            updateLabel(label: getLabel(sender), value: 1)
+        } else if sender.tag >= 12 {
+            //-5 Button (12-15)
+            updateLabel(label: getLabel(sender), value: -5)
+        } else if   sender.tag < 8 {
+            //-1 Buttons (4-7)
+            updateLabel(label: getLabel(sender), value: -1)
         } else {
-            //+5 Button (4-7)
-            (self.view.viewWithTag(sender.tag-4) as! UIStepper).value += 5
-            updateLabel(label: sender.tag-4, value: String((self.view.viewWithTag(sender.tag-8) as! UIStepper).value))
+            //+5 Button (8-11)
+            updateLabel(label: getLabel(sender), value: 5)
         }
     }
-    
-    //Updates the given label with the given value.
-    func updateLabel(label : Int, value: String) {
+    /* Updates the given label with the given value.
+     * Label refers to given player
+     * value refers to button pressed.
+     */
+    func updateLabel(label : Int, value: Int) {
         switch label {
-        case 0:
-            lifeTotal1?.text = value
-            break
         case 1:
-            lifeTotal2?.text = value
+            values[0] += value
+            lifeTotal1?.text = String(values[0])
             break
         case 2:
-            lifeTotal3?.text = value
+            values[1] += value
+            lifeTotal2?.text = String(values[1])
+            break
+        case 3:
+            values[2] += value
+            lifeTotal3?.text = String(values[2])
             break
         case 4:
-            lifeTotal4?.text = value
+            values[3] += value
+            lifeTotal4?.text = String(values[3])
             break
         default:
             break
         }
+        let loser = checkLoser()
+        if loser != 0 {
+           // losingPlayer?.text = "Player \(loser) Loses!"
+        }
     }
-    
     //Checks if any lifeTotals are 0. If so, prints losing message.
-    func checkLoser() {
+    func checkLoser() -> Int {
         var player = 0
-        if lifeTotal1?.text == "0" {
+        if values[0] <= 0 {
+            values[0] = 0
+            updateLabel(label: 1, value: 0)
             player = 1
         } else if lifeTotal2?.text == "0" {
+            values[1] = 0
+            updateLabel(label: 2, value: 0)
             player = 2
         } else if lifeTotal3?.text == "0" {
+            values[2] = 0
+            updateLabel(label: 3, value: 0)
             player = 3
         } else if lifeTotal4?.text == "0" {
+            values[3] = 0
+            updateLabel(label: 4, value: 0)
             player = 4
         }
-        if player != 0 {
-            losingPlayer?.text = "Player \(player) Loses!"
-        }
+        return player
     }
-    
+    func getLabel(_ sender: UIButton) -> Int{
+        return 5 - sender.tag % 4
+    }
 }
+
