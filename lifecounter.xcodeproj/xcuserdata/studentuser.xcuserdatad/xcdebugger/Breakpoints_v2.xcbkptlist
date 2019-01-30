@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462239"
+            timestampString = "570524329.360166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -88,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.46241"
+            timestampString = "570524329.36027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -113,11 +113,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462499"
+            timestampString = "570524329.360376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "updateLabel(label:value:lost:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -129,11 +129,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462626"
+            timestampString = "570524329.360454"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "checkLoser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -145,11 +145,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462725"
+            timestampString = "570524329.360516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "getLabel(_:)"
             landmarkType = "7">
             <Actions>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462792"
+            timestampString = "570524329.360576"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117">
+            startingLineNumber = "116"
+            endingLineNumber = "116">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.4628561"
+            timestampString = "570524329.360636"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "unknown"
             landmarkType = "0">
             <Locations>
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.462948"
+            timestampString = "570524329.360697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "updateLabel(label:value:lost:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570521493.4630491"
+            timestampString = "570524329.36078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "addValues(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
