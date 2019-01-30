@@ -31,6 +31,7 @@ class ViewController: UIViewController {
      */
     
     @IBAction func changeLife(_ sender: UIButton) {
+        
         if sender.tag < 4 {
             //+1 Buttons (0-3)
             updateLabel(label: getLabel(sender), value: 1)
