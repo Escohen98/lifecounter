@@ -9,14 +9,20 @@
 import UIKit
 
 class player: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    private var playerCount = 4
     //Defines how many cells to create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return playerCount
     }
     
     //Initializes new cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PlayersCell
+        cell.playerName.text = "Player \(indexPath.item + 1)"
+        cell.add1.tag = 1
+        cell.sub1.tag = -1
+        cell.add5.tag = 5
+        cell.sub5.tag = -5
         return cell
     }
     
@@ -28,6 +34,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     }
     @IBOutlet weak var players: UICollectionView!
     
+    //Updates the given label when a button has been pressed.
+    func updateLabel() {
+        
+    }
     
 }
 
@@ -36,7 +46,19 @@ class PlayersCell: UICollectionViewCell{
     @IBOutlet weak var playerName: UILabel!
     @IBOutlet weak var lifeTotal: UILabel!
     @IBOutlet weak var add1: UIButton!
-    @IBOutlet weak var aub1: UIButton!
+    @IBOutlet weak var sub1: UIButton!
     @IBOutlet weak var add5: UIButton!
     @IBOutlet weak var sub5: UIButton!
+    
+    @IBAction func changeLife(_ sender: UIButton) {
+        let health = UInt(Int(lifeTotal.text!)! + sender.tag)
+        if(checkLoser(health: health)) {
+        } else {
+            lifeTotal.text = "\(health)"
+        }
+    }
+    
+    func checkLoser(health : UInt) -> Bool{
+        return health == 0
+    }
 }
