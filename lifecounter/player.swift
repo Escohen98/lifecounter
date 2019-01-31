@@ -23,6 +23,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.sub1.tag = -1
         cell.add5.tag = 5
         cell.sub5.tag = -5
+        cell.add1.addTarget(self, action: "cell.changelife", for: .touchUpInside)
+        cell.sub1.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
+        cell.add5.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
+        cell.sub5.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
         return cell
     }
     
@@ -52,6 +56,7 @@ class PlayersCell: UICollectionViewCell{
     
     @IBAction func changeLife(_ sender: UIButton) {
         let health = UInt(Int(lifeTotal.text!)! + sender.tag)
+        print("Hi")
         if(checkLoser(health: health)) {
         } else {
             lifeTotal.text = "\(health)"
