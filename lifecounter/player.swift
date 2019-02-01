@@ -38,6 +38,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         players.delegate = self
         players.dataSource = self
         losingPlayer.isHidden = true
+        changeValue.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func addPlayer(_ sender: UIButton) {
@@ -66,6 +67,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     @IBOutlet weak var players: UICollectionView! //Array of PlayerCell objects
     @IBOutlet weak var losingPlayer: UILabel! //The UILabel of the player that lost
+    @IBOutlet weak var changeValue: UIView!
 }
 
 //A player with a +, -, +5, -5 button, a name, and a lifetotal
@@ -122,6 +124,11 @@ class PlayersCell: UICollectionViewCell {
         
         let indexPath = NSIndexPath(row: sender.tag, section: 0)
         historySegue.performSegue(withIdentifier: "sendData", sender: indexPath)
+    }
+    
+    //Changes the increment value of the +5/-5 buttons.
+    func changeIncrement() {
+        
     }
     
     //Checks if health is 0. Returns true if yes, false otherwise.s

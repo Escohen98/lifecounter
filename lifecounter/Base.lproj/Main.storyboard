@@ -18,6 +18,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losing player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-UY-wk0" customClass="players" customModule="lifecounter">
+                                <rect key="frame" x="156.5" y="855" width="101.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QrC-Ck-V9N"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="caT-D8-Ald"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-KO-PX8" userLabel="Change Value View">
+                                <rect key="frame" x="107" y="398" width="200" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5q7-1n-CBR">
+                                        <rect key="frame" x="51" y="35" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXA-51-4Er">
+                                        <rect key="frame" x="159" y="70" width="37" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Done"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDf-gS-Fn4">
+                                        <rect key="frame" x="7" y="70" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CX-79-fH8">
+                                        <rect key="frame" x="59" y="0.0" width="81" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Lye-UM-7pl"/>
+                                    <constraint firstAttribute="width" constant="200" id="XZS-yR-pTR"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-f3-4Eu">
+                                <rect key="frame" x="10" y="52" width="74" height="30"/>
+                                <state key="normal" title="Add Player"/>
+                                <connections>
+                                    <action selector="addPlayer:" destination="nde-g2-TOU" eventType="touchUpInside" id="CgP-2f-vOd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-G9-5b7">
+                                <rect key="frame" x="352" y="52" width="50" height="30"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <segue destination="kJI-vo-d87" kind="show" identifier="switchViews" id="1Xv-b7-7AF"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jBu-qP-DX6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,7 +111,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="ft1-th-2qm"/>
-                                                        <segue destination="kJI-vo-d87" kind="presentation" id="KIv-6c-iuo"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1 ">
@@ -110,35 +167,10 @@
                                             <outlet property="playerName" destination="a4g-0n-7p2" id="l2M-iM-CrX"/>
                                             <outlet property="sub1" destination="m7h-BE-6d1" id="0E0-QB-POw"/>
                                             <outlet property="sub5" destination="9fk-Af-muw" id="0hm-KO-xKj"/>
-                                            <segue destination="kJI-vo-d87" kind="presentation" identifier="sendDataCell" id="UWz-e1-hkX"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losing player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-UY-wk0" customClass="players" customModule="lifecounter">
-                                <rect key="frame" x="156.5" y="855" width="101.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="QrC-Ck-V9N"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="caT-D8-Ald"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-f3-4Eu">
-                                <rect key="frame" x="10" y="52" width="74" height="30"/>
-                                <state key="normal" title="Add Player"/>
-                                <connections>
-                                    <action selector="addPlayer:" destination="nde-g2-TOU" eventType="touchUpInside" id="CgP-2f-vOd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-G9-5b7">
-                                <rect key="frame" x="352" y="52" width="50" height="30"/>
-                                <state key="normal" title="History"/>
-                                <connections>
-                                    <segue destination="kJI-vo-d87" kind="show" identifier="switchViews" id="1Xv-b7-7AF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -147,6 +179,8 @@
                             <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="20" id="6Ue-gz-DBI"/>
                             <constraint firstAttribute="bottom" secondItem="jBu-qP-DX6" secondAttribute="bottom" id="A7i-O5-yeK"/>
                             <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" constant="8" id="H3e-qc-MpN"/>
+                            <constraint firstItem="m6I-KO-PX8" firstAttribute="centerY" secondItem="EmR-Hq-DAU" secondAttribute="centerY" id="P2V-CG-XEf"/>
+                            <constraint firstItem="m6I-KO-PX8" firstAttribute="centerX" secondItem="EmR-Hq-DAU" secondAttribute="centerX" id="QfV-2b-NHw"/>
                             <constraint firstItem="2Bs-G9-5b7" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" constant="8" id="SWH-TT-g20"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="trailing" secondItem="bnF-Lg-bvn" secondAttribute="trailing" id="TIn-Fb-wQQ"/>
                             <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="10" id="Usp-EV-Ndk"/>
@@ -157,6 +191,7 @@
                         <viewLayoutGuide key="safeArea" id="bnF-Lg-bvn"/>
                     </view>
                     <connections>
+                        <outlet property="changeValue" destination="m6I-KO-PX8" id="oHn-on-KpK"/>
                         <outlet property="losingPlayer" destination="9xY-UY-wk0" id="i1u-Sb-lWL"/>
                         <outlet property="players" destination="jBu-qP-DX6" id="122-aq-tLO"/>
                         <segue destination="kJI-vo-d87" kind="presentation" identifier="sendData" id="3iV-JG-Zfh"/>
@@ -216,6 +251,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KIv-6c-iuo"/>
+        <segue reference="1Xv-b7-7AF"/>
     </inferredMetricsTieBreakers>
 </document>
