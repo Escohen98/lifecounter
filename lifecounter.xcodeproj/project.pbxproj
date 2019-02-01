@@ -12,6 +12,7 @@
 		49E3F9E421FFD9C1002CFF86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E3F9E221FFD9C1002CFF86 /* Main.storyboard */; };
 		49E3F9E621FFD9C4002CFF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E3F9E521FFD9C4002CFF86 /* Assets.xcassets */; };
 		49E3F9E921FFD9C4002CFF86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E3F9E721FFD9C4002CFF86 /* LaunchScreen.storyboard */; };
+		49E3F9F122041577002CFF86 /* history.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E3F9F022041577002CFF86 /* history.swift */; };
 		726B90A722026F9E00244AC5 /* player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726B90A622026F9E00244AC5 /* player.swift */; };
 		726B90A922027C8F00244AC5 /* magic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 726B90A822027C8F00244AC5 /* magic.jpg */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		49E3F9E521FFD9C4002CFF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49E3F9E821FFD9C4002CFF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49E3F9EA21FFD9C4002CFF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E3F9F022041577002CFF86 /* history.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = history.swift; sourceTree = "<group>"; };
 		726B90A622026F9E00244AC5 /* player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = player.swift; sourceTree = "<group>"; };
 		726B90A822027C8F00244AC5 /* magic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = magic.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 				49E3F9E021FFD9C1002CFF86 /* ViewController.swift */,
 				726B90A622026F9E00244AC5 /* player.swift */,
 				49E3F9E221FFD9C1002CFF86 /* Main.storyboard */,
+				49E3F9F022041577002CFF86 /* history.swift */,
 				49E3F9E521FFD9C4002CFF86 /* Assets.xcassets */,
 				49E3F9E721FFD9C4002CFF86 /* LaunchScreen.storyboard */,
 				49E3F9EA21FFD9C4002CFF86 /* Info.plist */,
@@ -144,6 +147,7 @@
 			files = (
 				49E3F9E121FFD9C1002CFF86 /* ViewController.swift in Sources */,
 				726B90A722026F9E00244AC5 /* player.swift in Sources */,
+				49E3F9F122041577002CFF86 /* history.swift in Sources */,
 				49E3F9DF21FFD9C1002CFF86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import UIKit
 
 class player: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     private var playerCount = 4 //# of players
-    private var gameStarted = false
+    private var lifeTotals : [UILabel?] = [] //collection of lifetotals
     //Defines how many cells to create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerCount
@@ -24,6 +24,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.sub1.tag = -1
         cell.add5.tag = 5
         cell.sub5.tag = -5
+        lifeTotals.append(cell.lifeTotal)
         
         cell.setLosingPlayer(player: losingPlayer)
         cell.setPlayer(ID: indexPath.item + 1)
@@ -40,6 +41,12 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func addPlayer(_ sender: UIButton) {
+        var gameStarted = false
+        for text in lifeTotals {
+            if(text?.text != "20" && losingPlayer.isHidden) {
+                gameStarted = true;
+            }
+        }
         if playerCount < 8 && !gameStarted {
             playerCount += 1
             self.players.reloadData()
@@ -84,7 +91,7 @@ class PlayersCell: UICollectionViewCell {
         playerID = ID
     }
     
-    //Adds the given amount of health to to health. Sets lifeTotal text to the health value.
+    //Adds the given amount of health to to health. Sets lifeTotal text to the health value. Sends message to historyVC
     @IBAction func changeLife(_ sender: UIButton) {
         let health = Int(lifeTotal.text!)! + sender.tag
         if(checkLoser(health: health)) {
@@ -94,6 +101,27 @@ class PlayersCell: UICollectionViewCell {
         } else {
             lifeTotal.text = "\(health)"
         }
+        let historySegue = history()
+        var message = "Player \(playerID)"
+        if(sender.tag > 0) {
+            if(sender.tag == -1) {
+                message += "lost 1 life."
+            } else {
+            message += "lost \(abs(sender.tag)) lives."
+            }
+        } else {
+            if(sender.tag == 1) {
+                message += "gained 1 life."
+            } else {
+                message += "gained \(abs(sender.tag)) lives."
+            }
+        }
+        
+        historySegue.messages.append(message)
+        historySegue.actions += 1
+        
+        let indexPath = NSIndexPath(row: sender.tag, section: 0)
+        historySegue.performSegue(withIdentifier: "sendData", sender: indexPath)
     }
     
     //Checks if health is 0. Returns true if yes, false otherwise.s
