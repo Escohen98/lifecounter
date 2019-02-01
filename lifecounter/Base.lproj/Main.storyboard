@@ -35,14 +35,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="134" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-LH-HjU" userLabel="Life Total 1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-LH-HjU" userLabel="Life Total ">
                                                     <rect key="frame" x="55" y="39" width="25" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZf-3B-kG9" userLabel="+1 1">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZf-3B-kG9" userLabel="+1 ">
                                                     <rect key="frame" x="16" y="68" width="47" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.13004292549999999" green="0.99908632040000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +51,7 @@
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1 1">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1 ">
                                                     <rect key="frame" x="70" y="68" width="47" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.034920876080000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,7 +60,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-AF-rtD" userLabel="+5 1" colorLabel="IBBuiltInLabel-Green">
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-AF-rtD" userLabel="+5 " colorLabel="IBBuiltInLabel-Green">
                                                     <rect key="frame" x="16" y="103" width="47" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.13004292550266591" green="0.99908632040000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,7 +69,7 @@
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Af-muw" userLabel="-5 1" colorLabel="IBBuiltInLabel-Red">
+                                                <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Af-muw" colorLabel="IBBuiltInLabel-Red">
                                                     <rect key="frame" x="71" y="104" width="47" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="1" green="0.034920876077064067" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,7 +78,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-0n-7p2" userLabel="Player 1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-0n-7p2" userLabel="Player ">
                                                     <rect key="frame" x="35" y="14" width="65" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="player2"/>
@@ -90,12 +90,12 @@
                                         </view>
                                         <size key="customSize" width="134" height="162"/>
                                         <connections>
-                                            <outlet property="add1" destination="QZf-3B-kG9" id="OCX-xN-33b"/>
-                                            <outlet property="add5" destination="Knl-AF-rtD" id="BKc-0L-3co"/>
-                                            <outlet property="lifeTotal" destination="7cX-LH-HjU" id="HkA-22-RkC"/>
-                                            <outlet property="playerName" destination="a4g-0n-7p2" id="eX7-Kj-ve3"/>
-                                            <outlet property="sub1" destination="m7h-BE-6d1" id="dRV-yu-3pY"/>
-                                            <outlet property="sub5" destination="9fk-Af-muw" id="v9o-3G-IW3"/>
+                                            <outlet property="add1" destination="QZf-3B-kG9" id="arc-Sl-uXH"/>
+                                            <outlet property="add5" destination="Knl-AF-rtD" id="gXJ-Vc-9vZ"/>
+                                            <outlet property="lifeTotal" destination="7cX-LH-HjU" id="qnl-ld-fTU"/>
+                                            <outlet property="playerName" destination="a4g-0n-7p2" id="DdQ-GE-qh1"/>
+                                            <outlet property="sub1" destination="m7h-BE-6d1" id="AnH-ZI-gc3"/>
+                                            <outlet property="sub5" destination="9fk-Af-muw" id="JF2-yP-i7O"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -123,7 +123,8 @@
                         <viewLayoutGuide key="safeArea" id="bnF-Lg-bvn"/>
                     </view>
                     <connections>
-                        <outlet property="players" destination="jBu-qP-DX6" id="2Ce-nF-fML"/>
+                        <outlet property="losingPlayer" destination="9xY-UY-wk0" id="i1u-Sb-lWL"/>
+                        <outlet property="players" destination="jBu-qP-DX6" id="122-aq-tLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-YX-7MW" userLabel="First Responder" sceneMemberID="firstResponder"/>
