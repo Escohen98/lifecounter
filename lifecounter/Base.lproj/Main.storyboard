@@ -50,6 +50,9 @@
                                                     <state key="normal" title="+">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="ft1-th-2qm"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1 ">
                                                     <rect key="frame" x="70" y="68" width="47" height="30"/>
@@ -59,6 +62,9 @@
                                                     <state key="normal" title="-">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="pJC-B3-IbV"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-AF-rtD" userLabel="+5 " colorLabel="IBBuiltInLabel-Green">
                                                     <rect key="frame" x="16" y="103" width="47" height="29"/>
@@ -68,6 +74,9 @@
                                                     <state key="normal" title="+5">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="cEg-pd-Jg6"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Af-muw" colorLabel="IBBuiltInLabel-Red">
                                                     <rect key="frame" x="71" y="104" width="47" height="29"/>
@@ -77,6 +86,9 @@
                                                     <state key="normal" title="-5">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="Z5K-VG-cUD"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-0n-7p2" userLabel="Player ">
                                                     <rect key="frame" x="35" y="14" width="65" height="21"/>
@@ -90,12 +102,12 @@
                                         </view>
                                         <size key="customSize" width="134" height="162"/>
                                         <connections>
-                                            <outlet property="add1" destination="QZf-3B-kG9" id="arc-Sl-uXH"/>
-                                            <outlet property="add5" destination="Knl-AF-rtD" id="gXJ-Vc-9vZ"/>
-                                            <outlet property="lifeTotal" destination="7cX-LH-HjU" id="qnl-ld-fTU"/>
-                                            <outlet property="playerName" destination="a4g-0n-7p2" id="DdQ-GE-qh1"/>
-                                            <outlet property="sub1" destination="m7h-BE-6d1" id="AnH-ZI-gc3"/>
-                                            <outlet property="sub5" destination="9fk-Af-muw" id="JF2-yP-i7O"/>
+                                            <outlet property="add1" destination="QZf-3B-kG9" id="jxO-Mw-gAt"/>
+                                            <outlet property="add5" destination="Knl-AF-rtD" id="NcB-MR-3P7"/>
+                                            <outlet property="lifeTotal" destination="7cX-LH-HjU" id="VRe-N3-xph"/>
+                                            <outlet property="playerName" destination="a4g-0n-7p2" id="l2M-iM-CrX"/>
+                                            <outlet property="sub1" destination="m7h-BE-6d1" id="0E0-QB-POw"/>
+                                            <outlet property="sub5" destination="9fk-Af-muw" id="0hm-KO-xKj"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

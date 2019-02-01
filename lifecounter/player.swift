@@ -27,10 +27,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.setLosingPlayer(player: losingPlayer)
         cell.setPlayer(ID: indexPath.item + 1)
         
-        cell.add1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
+        /*cell.add1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
         cell.sub1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
         cell.add5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
-        cell.sub5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
+        cell.sub5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)*/
         return cell
     }
     
@@ -54,6 +54,7 @@ class PlayersCell: UICollectionViewCell{
     @IBOutlet weak var sub1: UIButton!
     @IBOutlet weak var add5: UIButton!
     @IBOutlet weak var sub5: UIButton!
+    
     
     weak var losingPlayer: UILabel!
     var playerID : Int = 0

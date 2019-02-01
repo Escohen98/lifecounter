@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360166"
+            timestampString = "570678458.677637"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -88,7 +88,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.36027"
+            timestampString = "570678458.677779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
@@ -113,7 +113,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360376"
+            timestampString = "570678458.677894"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -129,13 +129,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360454"
+            timestampString = "570678458.677995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "checkLoser()"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -145,13 +145,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360516"
+            timestampString = "570678458.678099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
             endingLineNumber = "112"
-            landmarkName = "getLabel(_:)"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
@@ -170,11 +170,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360576"
+            timestampString = "570678458.678202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
-            endingLineNumber = "116">
+            endingLineNumber = "116"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -184,13 +186,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360636"
+            timestampString = "570678458.678308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getLabel(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -232,13 +234,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.360697"
+            timestampString = "570678458.6784559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
             endingLineNumber = "53"
-            landmarkName = "updateLabel(label:value:lost:)"
-            landmarkType = "7">
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -248,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lifecounter/ViewController.swift"
-            timestampString = "570524329.36078"
+            timestampString = "570678458.67861"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
