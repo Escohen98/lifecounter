@@ -9,7 +9,8 @@
 import UIKit
 
 class player: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    private var playerCount = 4
+    private var playerCount = 4 //# of players
+    var indexPaths = [IndexPath]() //Array of player indexes
     //Defines how many cells to create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerCount
@@ -24,9 +25,12 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.add5.tag = 5
         cell.sub5.tag = -5
 
+        indexPaths.append(indexPath)
+        
         cell.setLosingPlayer(player: losingPlayer)
         cell.setPlayer(ID: indexPath.item + 1)
         
+        indexPaths.append(indexPath)
         /*cell.add1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
         cell.sub1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
         cell.add5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
@@ -39,11 +43,16 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         super.viewDidLoad()
         players.delegate = self
         players.dataSource = self
+        losingPlayer.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBAction func addPlayer(_ sender: UIButton) {
+        playerCount += 1
+        players.reloadItems(at: indexPaths)
+    }
     
-    @IBOutlet weak var players: UICollectionView!
-    @IBOutlet weak var losingPlayer: UILabel!
+    @IBOutlet weak var players: UICollectionView! //Array of PlayerCell objects
+    @IBOutlet weak var losingPlayer: UILabel! //The UILabel of the player that lost
 }
 
 //A player with a +, -, +5, -5 button, a name, and a lifetotal
@@ -71,16 +80,18 @@ class PlayersCell: UICollectionViewCell{
     
     //Adds the given amount of health to to health. Sets lifeTotal text to the health value.
     @IBAction func changeLife(_ sender: UIButton) {
-        let health = UInt(Int(lifeTotal.text!)! + sender.tag)
+        let health = Int(lifeTotal.text!)! + sender.tag
         if(checkLoser(health: health)) {
             losingPlayer.text = "Player \(playerID) loses!"
+            losingPlayer.isHidden = false
+            lifeTotal.text = "0"
         } else {
             lifeTotal.text = "\(health)"
         }
     }
     
     //Checks if health is 0. Returns true if yes, false otherwise.s
-    func checkLoser(health : UInt) -> Bool{
-        return health == 0
+    func checkLoser(health : Int) -> Bool{
+        return health <= 0
     }
 }
