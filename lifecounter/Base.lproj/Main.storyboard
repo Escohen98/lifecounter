@@ -124,8 +124,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-f3-4Eu">
-                                <rect key="frame" x="310" y="44" width="74" height="30"/>
+                                <rect key="frame" x="310" y="52" width="74" height="30"/>
                                 <state key="normal" title="Add Player"/>
+                                <connections>
+                                    <action selector="addPlayer:" destination="nde-g2-TOU" eventType="touchUpInside" id="CgP-2f-vOd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -133,7 +136,7 @@
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" id="0i5-r6-PqB"/>
                             <constraint firstAttribute="bottom" secondItem="9xY-UY-wk0" secondAttribute="bottom" constant="20" id="5NM-Lb-N53"/>
                             <constraint firstAttribute="bottom" secondItem="jBu-qP-DX6" secondAttribute="bottom" id="A7i-O5-yeK"/>
-                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" id="H3e-qc-MpN"/>
+                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" constant="8" id="H3e-qc-MpN"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="trailing" secondItem="bnF-Lg-bvn" secondAttribute="trailing" id="TIn-Fb-wQQ"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="top" secondItem="EmR-Hq-DAU" secondAttribute="top" id="Vqr-fy-hfo"/>
                             <constraint firstItem="9xY-UY-wk0" firstAttribute="centerX" secondItem="EmR-Hq-DAU" secondAttribute="centerX" id="bZj-WR-RrW"/>

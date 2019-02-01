@@ -10,7 +10,7 @@ import UIKit
 
 class player: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     private var playerCount = 4 //# of players
-    var indexPaths = [IndexPath]() //Array of player indexes
+    private var gameStarted = false
     //Defines how many cells to create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerCount
@@ -24,17 +24,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.sub1.tag = -1
         cell.add5.tag = 5
         cell.sub5.tag = -5
-
-        indexPaths.append(indexPath)
         
         cell.setLosingPlayer(player: losingPlayer)
         cell.setPlayer(ID: indexPath.item + 1)
         
-        indexPaths.append(indexPath)
-        /*cell.add1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
-        cell.sub1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
-        cell.add5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
-        cell.sub5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)*/
         return cell
     }
     
@@ -47,8 +40,21 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func addPlayer(_ sender: UIButton) {
-        playerCount += 1
-        players.reloadItems(at: indexPaths)
+        if playerCount < 8 && !gameStarted {
+            playerCount += 1
+            self.players.reloadData()
+        }
+    }
+    
+    //Checks if any of the players' health has been modified. Returns true if so, otherwise returns false.
+    func checkGameStart() -> Bool {
+        /*for player in self.players {
+        if player.lifeTotal.text == "20" || player.lifeTotal.text == "0" {
+            return true
+        }
+        return false
+        }*/
+        return false
     }
     
     @IBOutlet weak var players: UICollectionView! //Array of PlayerCell objects
@@ -56,7 +62,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 }
 
 //A player with a +, -, +5, -5 button, a name, and a lifetotal
-class PlayersCell: UICollectionViewCell{
+class PlayersCell: UICollectionViewCell {
     @IBOutlet weak var playerName: UILabel!
     @IBOutlet weak var lifeTotal: UILabel!
     @IBOutlet weak var add1: UIButton!
