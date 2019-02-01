@@ -23,13 +23,15 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.sub1.tag = -1
         cell.add5.tag = 5
         cell.sub5.tag = -5
-        cell.add1.addTarget(self, action: "cell.changelife", for: .touchUpInside)
-        cell.sub1.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
-        cell.add5.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
-        cell.sub5.addTarget(self, action: "cell.changeLife", for: .touchUpInside)
+
+        cell.add1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
+        cell.sub1.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
+        cell.add5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
+        cell.sub5.addTarget(self, action: #selector(cell.changeLife), for: .touchUpInside)
         return cell
     }
     
+    //Sets the appDelegate and dataSource to the players class.
     override func viewDidLoad() {
         super.viewDidLoad()
         players.delegate = self
@@ -37,12 +39,6 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBOutlet weak var players: UICollectionView!
-    
-    //Updates the given label when a button has been pressed.
-    func updateLabel() {
-        
-    }
-    
 }
 
 //A player with a +, -, +5, -5 button, a name, and a lifetotal
@@ -56,7 +52,6 @@ class PlayersCell: UICollectionViewCell{
     
     @IBAction func changeLife(_ sender: UIButton) {
         let health = UInt(Int(lifeTotal.text!)! + sender.tag)
-        print("Hi")
         if(checkLoser(health: health)) {
         } else {
             lifeTotal.text = "\(health)"
