@@ -32,13 +32,20 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
+    override func viewDidLayoutSubviews() {
+        if let flowLayout = players.collectionViewLayout as? UICollectionViewFlowLayout {
+            let width = players.bounds.width / 3
+            flowLayout.itemSize = CGSize(width: width, height: width)
+        }
+    }
+    
     //Sets the appDelegate and dataSource to the players class.
     override func viewDidLoad() {
         super.viewDidLoad()
         players.delegate = self
         players.dataSource = self
         losingPlayer.isHidden = true
-        changeValue.isHidden = true
+        //changeValue.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func addPlayer(_ sender: UIButton) {
@@ -63,6 +70,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         return false
         }*/
         return false
+    }
+    
+    @IBAction func changeIncrement(_ sender: UIButton) {
+        print(players.indexPathsForVisibleItems)
     }
     
     @IBOutlet weak var players: UICollectionView! //Array of PlayerCell objects
