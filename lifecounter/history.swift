@@ -9,22 +9,22 @@
 import UIKit
 
 class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var actions = 1
+    var actions = 0
     var messages : [String] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(actions)
         return actions
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HistoryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hcell", for: indexPath) as! HistoryCell
         cell.lifeChange.text = messages[indexPath.item]
         return cell
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Hi")
+        logs.delegate = self
+        logs.dataSource = self
     }
     
     override func didReceiveMemoryWarning() {
