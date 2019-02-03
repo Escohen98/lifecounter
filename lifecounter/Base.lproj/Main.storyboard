@@ -36,13 +36,16 @@
                                             <rect key="frame" x="351" y="27" width="50" height="30"/>
                                             <state key="normal" title="History"/>
                                             <connections>
-                                                <segue destination="kJI-vo-d87" kind="show" identifier="switchViews" id="1Xv-b7-7AF"/>
+                                                <segue destination="kJI-vo-d87" kind="popoverPresentation" identifier="switchViews" popoverAnchorView="2Bs-G9-5b7" id="1Xv-b7-7AF">
+                                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                </segue>
                                             </connections>
                                         </button>
                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZlB-gT-dJt" userLabel="Change Increment">
                                             <rect key="frame" x="160" y="27" width="94" height="29"/>
                                             <connections>
                                                 <action selector="changeIncrement:" destination="nde-g2-TOU" eventType="valueChanged" id="Tdj-17-68b"/>
+                                                <action selector="stepperToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="AjI-yB-Rtp"/>
                                             </connections>
                                         </stepper>
                                     </subviews>
@@ -196,7 +199,10 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Back"/>
                             <connections>
-                                <segue destination="nde-g2-TOU" kind="show" identifier="switchBackViews" id="yY3-je-9gh"/>
+                                <action selector="dismissVC:" destination="kJI-vo-d87" eventType="touchUpInside" id="wpi-fU-Mh5"/>
+                                <segue destination="nde-g2-TOU" kind="popoverPresentation" identifier="switchBackViews" popoverAnchorView="HgY-eG-DtF" id="yY3-je-9gh">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </button>
                         <prototypes>

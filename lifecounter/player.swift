@@ -11,7 +11,7 @@ import UIKit
 class player: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     private var playerCount = 4 //# of players
     private var lifeTotals : [UILabel?] = [] //collection of lifetotals
-    private var healthBtns : [Array<UIButton?>] = [] //2D array containing all buttons that modify a player's health and that aren't the +1, -1 btns
+    private var healthBtns : [Array<UIButton?>] = [] //2D array containing all buttons that modify a player's health
     //Defines how many cells to create
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playerCount
@@ -32,7 +32,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.add5.tag = 5
         cell.sub5.tag = -5
         lifeTotals.append(cell.lifeTotal)
-        healthBtns.append([cell.add5, cell.sub5])
+        healthBtns.append([cell.add5, cell.sub5, cell.add1, cell.sub1])
         
         cell.setLosingPlayer(player: losingPlayer)
         cell.setPlayer(ID: indexPath.item + 1)
@@ -72,8 +72,10 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         }
     }
     
+    //Gets data ready to segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "switchViews") {
+            print(actionsForHistory)
             let historyVC = segue.destination as! History
             historyVC.messages = messagesToHistory
             historyVC.actions = actionsForHistory
@@ -82,10 +84,11 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     var messagesToHistory : Array<String> = []
     var actionsForHistory : Int = 0
-    //Appends message of action to history messages array and adds 1 to action. Sends through sendData segue.
-   
+    
+    //Appends message of action to history messages array and adds 1 to action. S
     @IBAction func sendToHistory(_ sender: UIButton) {
-        var message = "Player"
+        let plyr = getPlayerID(button: sender)
+        var message = "Player \(plyr) "
         if(sender.tag > 0) {
             if(sender.tag == -1) {
                 message += "lost 1 life."
@@ -102,13 +105,28 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             messagesToHistory.append(message)
             actionsForHistory += 1
         }
-        
-        
-        
-       // let indexPath = NSIndexPath(row: sender.tag, section: 0)
-        //self.performSegue(withIdentifier: "sendData", sender: self)
     }
     
+    /*
+     * Gets the player ID from healthBtns
+     * Buttons are appended in-order.
+     * playerCell class has an id component, but
+     * unsure how to access from outside class.
+     */
+    func getPlayerID(button: UIButton) -> Int {
+        for i in 0...healthBtns.count {
+            if healthBtns[i].contains(button) {
+                return i + 1
+            }
+        }
+        return 0
+    }
+    
+    //Appends message that +5/-5 buttons values got changed to the messageToHistory array for logs.
+    @IBAction func stepperToHistory(_ sender: UIStepper) {
+        messagesToHistory.append("Increment value of +N/-N buttons set to \(Int(sender.value))")
+        actionsForHistory += 1
+    }
     //Changes the magnitude of the increment values of the +5/-5 buttons. 1 shift per press. Also changes their title labels.
     @IBAction func changeIncrement(_ sender: UIStepper) {
         for btn in healthBtns {

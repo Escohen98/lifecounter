@@ -27,8 +27,8 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
         logs.dataSource = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func dismissVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
