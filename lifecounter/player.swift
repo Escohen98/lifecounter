@@ -74,7 +74,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "switchViews") {
-            let historyVC = history()
+            let historyVC = History()
             historyVC.messages = messagesToHistory
             historyVC.actions = actionsForHistory
         }

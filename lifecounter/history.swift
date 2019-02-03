@@ -8,8 +8,8 @@
 
 import UIKit
 
-class history: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var actions = 0
+class History: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    var actions = 1
     var messages : [String] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(actions)
@@ -24,11 +24,15 @@ class history: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        print("Hi")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     
-    @IBOutlet weak var logs: HistoryCell!
+    @IBOutlet var logs: UITableView!
 }
 
 class HistoryCell: UITableViewCell {

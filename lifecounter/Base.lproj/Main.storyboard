@@ -200,21 +200,26 @@
                             </connections>
                         </button>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="2H6-fI-m3d" customClass="HistoryCell" customModule="lifecounter" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="45" id="2H6-fI-m3d" userLabel="historyCell" customClass="HistoryCell" customModule="lifecounter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2H6-fI-m3d" id="ya5-KE-Whp">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqq-fZ-ZP6">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqq-fZ-ZP6">
                                             <rect key="frame" x="0.0" y="-1" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mqq-fZ-ZP6" secondAttribute="bottom" constant="-9" id="AJB-nw-Oe0"/>
+                                        <constraint firstItem="mqq-fZ-ZP6" firstAttribute="leading" secondItem="ya5-KE-Whp" secondAttribute="leading" id="pnQ-Ed-zX3"/>
+                                        <constraint firstItem="mqq-fZ-ZP6" firstAttribute="top" secondItem="ya5-KE-Whp" secondAttribute="topMargin" constant="-12" id="qWp-gP-UJi"/>
+                                        <constraint firstAttribute="trailing" secondItem="mqq-fZ-ZP6" secondAttribute="trailing" id="u2N-BU-gK1"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lifeChange" destination="mqq-fZ-ZP6" id="tni-5i-6V1"/>
@@ -227,8 +232,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="logger" destination="2H6-fI-m3d" id="y4p-pH-4tL"/>
-                        <outlet property="logs" destination="2H6-fI-m3d" id="k4A-Kv-PVg"/>
+                        <outlet property="logs" destination="KyH-Jm-iJc" id="Izb-vQ-OvT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mm-NO-9Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
