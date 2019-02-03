@@ -48,13 +48,22 @@
                                                 <action selector="stepperToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="AjI-yB-Rtp"/>
                                             </connections>
                                         </stepper>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-f3-4Eu">
+                                            <rect key="frame" x="8" y="26" width="74" height="30"/>
+                                            <state key="normal" title="Add Player"/>
+                                            <connections>
+                                                <action selector="addPlayer:" destination="nde-g2-TOU" eventType="touchUpInside" id="CgP-2f-vOd"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="2Bs-G9-5b7" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="topMargin" constant="44" id="81G-88-eU1"/>
-                                        <constraint firstItem="ZlB-gT-dJt" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="topMargin" constant="44" id="Es4-OT-IDA"/>
+                                        <constraint firstItem="ZlB-gT-dJt" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="topMargin" constant="30" id="Es4-OT-IDA"/>
+                                        <constraint firstItem="2Bs-G9-5b7" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="top" constant="44" id="M9b-IC-xJ8"/>
                                         <constraint firstAttribute="trailing" secondItem="2Bs-G9-5b7" secondAttribute="trailing" constant="10" id="MeY-d8-ToT"/>
+                                        <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="top" constant="44" id="e4A-1q-RpA"/>
                                         <constraint firstItem="ZlB-gT-dJt" firstAttribute="centerX" secondItem="m6I-KO-PX8" secondAttribute="centerX" id="erd-jh-71l"/>
+                                        <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="m6I-KO-PX8" secondAttribute="leading" constant="10" id="u6J-IA-rTJ"/>
                                     </constraints>
                                 </view>
                                 <cells>
@@ -156,24 +165,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEg-f3-4Eu">
-                                <rect key="frame" x="10" y="28" width="74" height="30"/>
-                                <state key="normal" title="Add Player"/>
-                                <connections>
-                                    <action selector="addPlayer:" destination="nde-g2-TOU" eventType="touchUpInside" id="CgP-2f-vOd"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" id="0i5-r6-PqB"/>
                             <constraint firstAttribute="bottom" secondItem="9xY-UY-wk0" secondAttribute="bottom" constant="20" id="5NM-Lb-N53"/>
                             <constraint firstAttribute="bottom" secondItem="jBu-qP-DX6" secondAttribute="bottom" id="A7i-O5-yeK"/>
-                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" constant="8" id="H3e-qc-MpN"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="trailing" secondItem="bnF-Lg-bvn" secondAttribute="trailing" id="TIn-Fb-wQQ"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="top" secondItem="EmR-Hq-DAU" secondAttribute="top" id="Vqr-fy-hfo"/>
                             <constraint firstItem="9xY-UY-wk0" firstAttribute="centerX" secondItem="EmR-Hq-DAU" secondAttribute="centerX" id="bZj-WR-RrW"/>
-                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="10" id="wbt-AH-fDx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnF-Lg-bvn"/>
                     </view>
@@ -190,7 +190,7 @@
         <scene sceneID="gnD-t0-y8b">
             <objects>
                 <tableViewController id="kJI-vo-d87" userLabel="history" customClass="History" customModule="lifecounter" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KyH-Jm-iJc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="31" id="KyH-Jm-iJc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -243,7 +243,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mm-NO-9Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.68115942029" y="-172.09821428571428"/>
+            <point key="canvasLocation" x="1337.68115942029" y="-172.82608695652175"/>
         </scene>
     </scenes>
 </document>

@@ -40,13 +40,6 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         return cell
     }
     
-   /* override func viewDidLayoutSubviews() {
-        if let flowLayout = players.collectionViewLayout as? UICollectionViewFlowLayout {
-            let width = players.bounds.width / 1
-            flowLayout.itemSize = CGSize(width: width, height: width)
-        }
-    }*/
-    
     //Sets the appDelegate and dataSource to the players class.
     override func viewDidLoad() {
         super.viewDidLoad()
