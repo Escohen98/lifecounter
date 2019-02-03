@@ -75,7 +75,6 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     //Gets data ready to segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "switchViews") {
-            print(actionsForHistory)
             let historyVC = segue.destination as! History
             historyVC.messages = messagesToHistory
             historyVC.actions = actionsForHistory
@@ -103,7 +102,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
                 message += "gained \(abs(sender.tag)) lives."
             }
         }
-        messagesToHistory.append(message)
+    messagesToHistory.append(message)
         actionsForHistory += 1
     }
     

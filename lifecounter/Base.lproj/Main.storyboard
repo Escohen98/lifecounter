@@ -82,7 +82,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="ft1-th-2qm"/>
-                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="bZS-fl-18I"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="REV-2o-uRW"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1">
@@ -95,7 +95,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="pJC-B3-IbV"/>
-                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="wUN-Gh-Tx2"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="JxT-X7-I4Z"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-AF-rtD" userLabel="+5 " colorLabel="IBBuiltInLabel-Green">
@@ -108,7 +108,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="cEg-pd-Jg6"/>
-                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="LLv-7C-9LZ"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="zbO-8S-lMQ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Af-muw" colorLabel="IBBuiltInLabel-Red">
@@ -121,7 +121,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="Z5K-VG-cUD"/>
-                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="AJs-ZY-NNe"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchUpInside" id="UuZ-bp-urs"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-0n-7p2" userLabel="Player ">
