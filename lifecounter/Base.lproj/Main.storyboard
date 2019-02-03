@@ -79,6 +79,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="ft1-th-2qm"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="4ls-ET-GcM"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7h-BE-6d1" userLabel="-1 ">
@@ -91,6 +92,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="pJC-B3-IbV"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="wUN-Gh-Tx2"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knl-AF-rtD" userLabel="+5 " colorLabel="IBBuiltInLabel-Green">
@@ -103,6 +105,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="cEg-pd-Jg6"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="LLv-7C-9LZ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-Af-muw" colorLabel="IBBuiltInLabel-Red">
@@ -115,6 +118,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="changeLife:" destination="7nx-Ge-s8Z" eventType="touchUpInside" id="Z5K-VG-cUD"/>
+                                                        <action selector="sendToHistory:" destination="nde-g2-TOU" eventType="touchDown" id="AJs-ZY-NNe"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-0n-7p2" userLabel="Player ">
@@ -135,6 +139,7 @@
                                             <outlet property="playerName" destination="a4g-0n-7p2" id="l2M-iM-CrX"/>
                                             <outlet property="sub1" destination="m7h-BE-6d1" id="0E0-QB-POw"/>
                                             <outlet property="sub5" destination="9fk-Af-muw" id="0hm-KO-xKj"/>
+                                            <segue destination="kJI-vo-d87" kind="presentation" identifier="sendData" id="feT-Lw-fvl"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -173,7 +178,6 @@
                     <connections>
                         <outlet property="losingPlayer" destination="9xY-UY-wk0" id="i1u-Sb-lWL"/>
                         <outlet property="players" destination="jBu-qP-DX6" id="122-aq-tLO"/>
-                        <segue destination="kJI-vo-d87" kind="presentation" identifier="sendData" id="vGF-4H-I8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-YX-7MW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,6 +234,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vGF-4H-I8k"/>
+        <segue reference="feT-Lw-fvl"/>
     </inferredMetricsTieBreakers>
 </document>

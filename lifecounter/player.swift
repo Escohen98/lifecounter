@@ -17,6 +17,7 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         return playerCount
     }
     
+    
     /*
      *Initializes new cell. Adds lifeTotals to lifeTotals array and
      *designated health buttons to healthBtnsArray.
@@ -30,7 +31,6 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         cell.sub1.tag = -1
         cell.add5.tag = 5
         cell.sub5.tag = -5
-        
         lifeTotals.append(cell.lifeTotal)
         healthBtns.append([cell.add5, cell.sub5])
         
@@ -56,8 +56,11 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         //changeValue.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    private var gameStarted = false //Flagger for if the game is in progress.
+    //Adds a player if the game hasn't started or has ended and if there are less than 8 players.
     @IBAction func addPlayer(_ sender: UIButton) {
-        var gameStarted = false
+        
         for text in lifeTotals {
             if(text?.text != "20" && losingPlayer.isHidden) {
                 gameStarted = true;
@@ -69,15 +72,29 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         }
     }
     
-    //Checks if any of the players' health has been modified. Returns true if so, otherwise returns false.
-    func checkGameStart() -> Bool {
-        /*for player in self.players {
-        if player.lifeTotal.text == "20" || player.lifeTotal.text == "0" {
-            return true
+    //Appends message of action to history messages array and adds 1 to action. Sends through sendData segue.
+    @IBAction func sendToHistory(_ sender: UIButton) {
+        let historyVC = history()
+        var message = "Player"
+        if(sender.tag > 0) {
+            if(sender.tag == -1) {
+                message += "lost 1 life."
+            } else {
+                message += "lost \(abs(sender.tag)) lives."
+            }
+        } else {
+            if(sender.tag == 1) {
+                message += "gained 1 life."
+            } else {
+                message += "gained \(abs(sender.tag)) lives."
+            }
         }
-        return false
-        }*/
-        return false
+        
+        historyVC.messages.append(message)
+        historyVC.actions += 1
+        
+       // let indexPath = NSIndexPath(row: sender.tag, section: 0)
+        self.performSegue(withIdentifier: "sendData", sender: self)
     }
     
     //Changes the magnitude of the increment values of the +5/-5 buttons. 1 shift per press. Also changes their title labels.
@@ -103,7 +120,6 @@ class PlayersCell: UICollectionViewCell {
     @IBOutlet weak var add5: UIButton!
     @IBOutlet weak var sub5: UIButton!
     
-    
     weak var losingPlayer: UILabel!
     var playerID : Int = 0
     
@@ -117,7 +133,7 @@ class PlayersCell: UICollectionViewCell {
         playerID = ID
     }
     
-    //Adds the given amount of health to to health. Sets lifeTotal text to the health value. Sends message to historyVC
+    //Adds the given amount of health to to health. Sets lifeTotal text to the health value.
     @IBAction func changeLife(_ sender: UIButton) {
         let health = Int(lifeTotal.text!)! + sender.tag
         if(checkLoser(health: health)) {
@@ -127,27 +143,6 @@ class PlayersCell: UICollectionViewCell {
         } else {
             lifeTotal.text = "\(health)"
         }
-        let historySegue = history()
-        var message = "Player \(playerID)"
-        if(sender.tag > 0) {
-            if(sender.tag == -1) {
-                message += "lost 1 life."
-            } else {
-            message += "lost \(abs(sender.tag)) lives."
-            }
-        } else {
-            if(sender.tag == 1) {
-                message += "gained 1 life."
-            } else {
-                message += "gained \(abs(sender.tag)) lives."
-            }
-        }
-        
-        historySegue.messages.append(message)
-        historySegue.actions += 1
-        
-        let indexPath = NSIndexPath(row: sender.tag, section: 0)
-        historySegue.performSegue(withIdentifier: "sendData", sender: indexPath)
     }
     
     //Checks if health is 0. Returns true if yes, false otherwise.s
