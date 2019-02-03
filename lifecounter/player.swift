@@ -87,24 +87,24 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     //Appends message of action to history messages array and adds 1 to action. S
     @IBAction func sendToHistory(_ sender: UIButton) {
+        print("hi")
         let plyr = getPlayerID(button: sender)
         var message = "Player \(plyr) "
         if(sender.tag > 0) {
-            if(sender.tag == -1) {
+            if(sender.tag == 1) {
                 message += "lost 1 life."
             } else {
                 message += "lost \(abs(sender.tag)) lives."
             }
         } else {
-            if(sender.tag == 1) {
+            if(sender.tag == -1) {
                 message += "gained 1 life."
             } else {
                 message += "gained \(abs(sender.tag)) lives."
             }
-            
-            messagesToHistory.append(message)
-            actionsForHistory += 1
         }
+        messagesToHistory.append(message)
+        actionsForHistory += 1
     }
     
     /*
