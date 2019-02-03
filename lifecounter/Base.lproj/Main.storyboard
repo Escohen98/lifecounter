@@ -139,7 +139,6 @@
                                             <outlet property="playerName" destination="a4g-0n-7p2" id="l2M-iM-CrX"/>
                                             <outlet property="sub1" destination="m7h-BE-6d1" id="0E0-QB-POw"/>
                                             <outlet property="sub5" destination="9fk-Af-muw" id="0hm-KO-xKj"/>
-                                            <segue destination="kJI-vo-d87" kind="presentation" identifier="sendData" id="feT-Lw-fvl"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,7 +207,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqq-fZ-ZP6">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqq-fZ-ZP6">
                                             <rect key="frame" x="0.0" y="-1" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -227,13 +226,14 @@
                             <outlet property="delegate" destination="kJI-vo-d87" id="baU-gb-08x"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="logger" destination="2H6-fI-m3d" id="y4p-pH-4tL"/>
+                        <outlet property="logs" destination="2H6-fI-m3d" id="k4A-Kv-PVg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Mm-NO-9Ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1337.68115942029" y="-172.09821428571428"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="feT-Lw-fvl"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -72,9 +72,19 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "switchViews") {
+            let historyVC = history()
+            historyVC.messages = messagesToHistory
+            historyVC.actions = actionsForHistory
+        }
+    }
+    
+    var messagesToHistory : Array<String> = []
+    var actionsForHistory : Int = 0
     //Appends message of action to history messages array and adds 1 to action. Sends through sendData segue.
+   
     @IBAction func sendToHistory(_ sender: UIButton) {
-        let historyVC = history()
         var message = "Player"
         if(sender.tag > 0) {
             if(sender.tag == -1) {
@@ -88,13 +98,15 @@ class player: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             } else {
                 message += "gained \(abs(sender.tag)) lives."
             }
+            
+            messagesToHistory.append(message)
+            actionsForHistory += 1
         }
         
-        historyVC.messages.append(message)
-        historyVC.actions += 1
+        
         
        // let indexPath = NSIndexPath(row: sender.tag, section: 0)
-        self.performSegue(withIdentifier: "sendData", sender: self)
+        //self.performSegue(withIdentifier: "sendData", sender: self)
     }
     
     //Changes the magnitude of the increment values of the +5/-5 buttons. 1 shift per press. Also changes their title labels.

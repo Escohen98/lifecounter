@@ -12,6 +12,7 @@ class history: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var actions = 0
     var messages : [String] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(actions)
         return actions
     }
     
@@ -21,7 +22,13 @@ class history: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+    }
+    
+    
+    @IBOutlet weak var logs: HistoryCell!
 }
 
 class HistoryCell: UITableViewCell {
