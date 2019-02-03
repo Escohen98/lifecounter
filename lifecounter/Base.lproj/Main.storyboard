@@ -32,23 +32,26 @@
                                     <rect key="frame" x="0.0" y="-20" width="414" height="736"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-G9-5b7">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bs-G9-5b7">
                                             <rect key="frame" x="351" y="27" width="50" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="History"/>
                                             <connections>
                                                 <segue destination="kJI-vo-d87" kind="show" identifier="switchViews" id="1Xv-b7-7AF"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-xz-wDI">
-                                            <rect key="frame" x="144" y="27" width="126" height="30"/>
-                                            <state key="normal" title="Change Increment"/>
-                                        </button>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZlB-gT-dJt" userLabel="Change Increment">
+                                            <rect key="frame" x="160" y="27" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="changeIncrement:" destination="nde-g2-TOU" eventType="valueChanged" id="Tdj-17-68b"/>
+                                            </connections>
+                                        </stepper>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="iIW-xz-wDI" firstAttribute="centerX" secondItem="m6I-KO-PX8" secondAttribute="centerX" id="I8N-W4-b53"/>
-                                        <constraint firstItem="iIW-xz-wDI" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="top" constant="28" id="tCo-1t-W4H"/>
+                                        <constraint firstItem="2Bs-G9-5b7" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="topMargin" constant="44" id="81G-88-eU1"/>
+                                        <constraint firstItem="ZlB-gT-dJt" firstAttribute="top" secondItem="m6I-KO-PX8" secondAttribute="topMargin" constant="44" id="Es4-OT-IDA"/>
+                                        <constraint firstAttribute="trailing" secondItem="2Bs-G9-5b7" secondAttribute="trailing" constant="10" id="MeY-d8-ToT"/>
+                                        <constraint firstItem="ZlB-gT-dJt" firstAttribute="centerX" secondItem="m6I-KO-PX8" secondAttribute="centerX" id="erd-jh-71l"/>
                                     </constraints>
                                 </view>
                                 <cells>
@@ -158,19 +161,19 @@
                         <constraints>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" id="0i5-r6-PqB"/>
                             <constraint firstAttribute="bottom" secondItem="9xY-UY-wk0" secondAttribute="bottom" constant="20" id="5NM-Lb-N53"/>
-                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="20" id="6Ue-gz-DBI"/>
                             <constraint firstAttribute="bottom" secondItem="jBu-qP-DX6" secondAttribute="bottom" id="A7i-O5-yeK"/>
                             <constraint firstItem="eEg-f3-4Eu" firstAttribute="top" secondItem="bnF-Lg-bvn" secondAttribute="top" constant="8" id="H3e-qc-MpN"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="trailing" secondItem="bnF-Lg-bvn" secondAttribute="trailing" id="TIn-Fb-wQQ"/>
-                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="10" id="Usp-EV-Ndk"/>
                             <constraint firstItem="jBu-qP-DX6" firstAttribute="top" secondItem="EmR-Hq-DAU" secondAttribute="top" id="Vqr-fy-hfo"/>
                             <constraint firstItem="9xY-UY-wk0" firstAttribute="centerX" secondItem="EmR-Hq-DAU" secondAttribute="centerX" id="bZj-WR-RrW"/>
+                            <constraint firstItem="eEg-f3-4Eu" firstAttribute="leading" secondItem="bnF-Lg-bvn" secondAttribute="leading" constant="10" id="wbt-AH-fDx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnF-Lg-bvn"/>
                     </view>
                     <connections>
                         <outlet property="losingPlayer" destination="9xY-UY-wk0" id="i1u-Sb-lWL"/>
                         <outlet property="players" destination="jBu-qP-DX6" id="122-aq-tLO"/>
+                        <segue destination="kJI-vo-d87" kind="presentation" identifier="sendData" id="vGF-4H-I8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-YX-7MW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,4 +229,7 @@
             <point key="canvasLocation" x="1337.68115942029" y="-172.09821428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vGF-4H-I8k"/>
+    </inferredMetricsTieBreakers>
 </document>
